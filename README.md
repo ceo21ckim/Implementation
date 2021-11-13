@@ -41,6 +41,10 @@ NLP, VISION,... 다양한 분야의 모델을 구현합니다.
 
 [seqlink]: https://github.com/ceo21ckim/Implementation/tree/main/NLP/Seq2Seq "Seq2Seq code"
 
+[NNLM][nnlmlink]
+
+[nnlmlink]: https://github.com/ceo21ckim/Implementation/tree/main/NLP/NNLM "NNLM code"
+
 ## RNN
 
 [RNN][rnnlink]
