@@ -45,6 +45,10 @@ NLP, VISION,... 다양한 분야의 모델을 구현합니다.
 
 [nnlmlink]: https://github.com/ceo21ckim/Implementation/tree/main/NLP/NNLM "NNLM code"
 
+[Multilingual-BERT][mlbert]
+
+[mlbert]: https://github.com/ceo21ckim/Implementation/tree/main/NLP/multilingual_bert "Multilingual-BERT code"
+
 ## RNN
 
 [RNN][rnnlink]
