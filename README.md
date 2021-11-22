@@ -31,6 +31,11 @@ Transformer : [[Transformer 참고자료]][link] / [[Blog]][link1]
 
 [link1]: https://ok-lab.tistory.com/77 "제가 작성한 블로그입니다"
 
+## Longformer
+
+Longformer : [논문][longformer_paper]
+
+[longformer_paper]: https://arxiv.org/pdf/2004.05150.pdf "Longformer paper"
 
 ## NLP
 
