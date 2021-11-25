@@ -60,3 +60,9 @@ Multilingual-BERT : [Multilingual-BERT][mlbert]
 RNN : [RNN][rnnlink]
 
 [rnnlink]: https://github.com/ceo21ckim/Implementation/tree/main/RNN "RNN code"
+
+## LSTM
+
+LSTM : [LSTM][lstmlink]
+
+[lstmlink]: https://github.com/ceo21ckim/Implementation/blob/main/LSTM/lstm_basic.py "LSTM code"
