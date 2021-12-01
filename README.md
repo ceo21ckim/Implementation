@@ -45,7 +45,7 @@ KoBERT : [KoBERT][kobertlink]
 
 BERT : [BERT][bertlink]
 
-[berklink]: https://github.com/ceo21ckim/Implementation/tree/main/NLP/BERT "BERT code"
+[bertlink]: https://github.com/ceo21ckim/Implementation/tree/main/NLP/BERT "BERT code"
 
 Seq2Seq : [Seq2Seq][seqlink]
 
