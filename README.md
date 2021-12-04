@@ -70,3 +70,9 @@ RNN : [RNN][rnnlink]
 LSTM : [LSTM][lstmlink]
 
 [lstmlink]: https://github.com/ceo21ckim/Implementation/blob/main/LSTM/lstm_basic.py "LSTM code"
+
+# Recommender System
+
+ALS : [ALS][alslink]
+
+[alslink]: https://github.com/ceo21ckim/Implementation/blob/main/Recommendation%20System/ALS/ALS1.ipynb "ALS code"
