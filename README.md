@@ -80,3 +80,7 @@ ALS : [ALS][alslink]
 SGD : [SGD][sgdlink]
 
 [sgdlink]: https://github.com/ceo21ckim/Implementation/tree/main/Recommendation%20System/SGD "SGD code"
+
+Association Rule : [Association Rule][arlink]
+
+[arlink]: https://github.com/ceo21ckim/Implementation/tree/main/Recommendation%20System/assocication%20rule "association rule code"
