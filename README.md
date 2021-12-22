@@ -76,3 +76,7 @@ LSTM : [LSTM][lstmlink]
 ALS : [ALS][alslink]
 
 [alslink]: https://github.com/ceo21ckim/Implementation/blob/main/Recommendation%20System/ALS/ALS1.ipynb "ALS code"
+
+SGD : [SGD][sgdlink]
+
+[sgdlink]: https://github.com/ceo21ckim/Implementation/tree/main/Recommendation%20System/SGD "SGD code"
