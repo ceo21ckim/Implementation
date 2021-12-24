@@ -25,7 +25,7 @@ Vanila GAN : [GAN_basic][gan_basic_link]
 
 ## Transformer
 
-Transformer : [[참고자료]][link] / [[블로그]][link1]
+Transformer : [참고자료][link] / [블로그][link1]
 
 [link]: https://jalammar.github.io/illustrated-transformer/ "좋은 자료 입니다."
 
