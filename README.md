@@ -84,3 +84,12 @@ SGD : [SGD][sgdlink]
 Association Rule : [Association Rule][arlink]
 
 [arlink]: https://github.com/ceo21ckim/Implementation/tree/main/Recommendation%20System/assocication%20rule "association rule code"
+
+MF : [MF][mflink]
+
+[mflink]: https://github.com/ceo21ckim/Implementation/blob/main/Recommendation%20System/MF/Generalized%20Matrix%20Factorization.py "MF code"
+
+GMF : [GMF][gmflink]
+
+[gmflink]: https://github.com/ceo21ckim/Implementation/blob/main/Recommendation%20System/MF/Matrix%20Factorization.py "GMF code"
+
