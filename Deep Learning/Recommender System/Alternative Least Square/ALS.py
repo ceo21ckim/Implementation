@@ -49,6 +49,18 @@ class AlternativeLeastSquare:
             self.X[u] = np.linalg.solve(yT_Cu_y + r_identity, yT_Cu_pu)
             
     def pred_Y(self):
+        
+        '''
+        self.xT : (latent_dim, user_num)
+        self.Ci : (user_num, user_num)
+        self.X : (user_num, latent_dim)
+        self.P[:,i] : (user_num, )
+        
+        xT_Ci_x : (latent_dim, latent_dim)
+        xT_Ci_pi : (latent_dim, )
+        
+        r_identity : (latent_dim, latent_dim)
+        '''
         for i in range(self.item_num):
             Ci = np.diag(self.C[:, i])
             yT_Ci_y = np.matmul(np.matmul(self.xT, Ci), self.X)
