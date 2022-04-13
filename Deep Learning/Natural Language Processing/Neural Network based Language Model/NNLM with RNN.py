@@ -1,4 +1,4 @@
-# conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+# pip install torch==1.10.0+cu113 torchvision==0.11.0+cu113 torchaudio==0.10.0 -f https://download.pytorch.org/whl/torch_stable.html
 # torchtext==0.11.0
 # pip install spacy 
 
@@ -11,10 +11,8 @@ Once we have our final hidden state (h_T), we feed it through a linear layer f(F
 h_0: initial hidden state is a tensor initialized to all zeros.
 """
 import torch
-torch.cuda.get_device_capability()
-torch.cuda.get_device_name()
 from torchtext.legacy import data 
-import sys, random 
+import sys, random
 sys.path.append('../')
 
 SEED = 1234 
@@ -27,7 +25,7 @@ TEXT field has tokenize='spacy' as an argument. Consequently, can use spaCy toke
 LABEL defined by a LabelField, a special subset of the Field class specifically used for handling labels. We will explain the dtype argument later.
 """
 ###################################  Preparing Data  #########################################
-import spacy 
+import spacy
 spacy.cli.download('en_core_web_sm')
 TEXT = data.Field(tokenize = 'spacy', tokenizer_language = 'en_core_web_sm')
 LABEL = data.LabelField(dtype=torch.float)
@@ -48,7 +46,7 @@ print(vars(train_data.examples[0]))
 split_ratio : default 7:3, we can change the ratio of the split, i.e. a split_ratio of 0.8 would mean 80% of the examples make up the training set and 20% make up the validation set.
 We also pass our random seed to the random_state argument, ensuring that we get the same train/validation split each time.
 """
-train_data, valid_data = train_data.split(random_state = random.seed(SEED), split_ratio=0.7)
+train_data, valid_data = train_data.split(random_state = random.seed(SEED))
 
 print(f'Number of training examples: {len(train_data)}') ; print(f'Number of validation examples: {len(valid_data)}') ; print(f'Number of testing examples: {len(test_data)}')
 
@@ -75,7 +73,7 @@ print(TEXT.vocab.freqs.most_common(n=20))
 print(TEXT.vocab.itos[:10])
 print(TEXT.vocab.stoi['hi'])
 
-BATCH_SIZE = 64 
+BATCH_SIZE = 32
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 """
@@ -108,33 +106,32 @@ The RNN returns tensors, 'output' of size [sentence length, batch size, hidden d
 'output' is the concatenation of the hidden state from every time step, whereas 'hidden' is simply the final hidden state. We verify this using the 'assert' statetment.
 """
 
-import torch.nn as nn 
+import torch.nn as nn
 
 class RNN(nn.Module):
     def __init__(self, input_dim, embedding_dim, hidden_dim, output_dim):
-        super(RNN, self).__init__()
+        super().__init__()
 
         self.embedding = nn.Embedding(input_dim, embedding_dim)
         self.rnn = nn.RNN(embedding_dim, hidden_dim)
-        self.classifier = nn.Linear(hidden_dim, output_dim)
+        self.fc = nn.Linear(hidden_dim, output_dim)
 
     def forward(self, text):
-        text_embedding = self.embedding(text)
-        output_state, hidden_state = self.rnn(text_embedding)
+        embedded = self.embedding(text)
+        output, hidden = self.rnn(embedded)
         
         # output : [sentence length, batch size, hidden dim]
         # hidden : [1, batch size, hidden dim]
 
-        assert torch.equal(output_state[-1, :, :], hidden_state.squeeze(0))
+        assert torch.equal(output[-1, :, :], hidden.squeeze(0))
 
-        return self.classifier(hidden_state.squeeze(0)) # squeeze: which is used to remove a dimension of size 1.
+        return self.fc(hidden.squeeze(0)) # squeeze: which is used to remove a dimension of size 1.
 
 
 INPUT_DIM = len(TEXT.vocab)
 EMBEDDING_DIM = 100 
 HIDDEN_DIM = 256 
-OUTPUT_DIM = 1 
-INPUT_DIM = 10000
+OUTPUT_DIM = 1
 model = RNN(INPUT_DIM, EMBEDDING_DIM, HIDDEN_DIM, OUTPUT_DIM)
 
 
@@ -147,7 +144,6 @@ print(f'The model has {count_parameters(model):,} trainable parameters')
 ###################################  Train the Model  #########################################
 import torch.optim as optim 
 optimizer = optim.SGD(model.parameters(), lr=1e-3)
-
 criterion = nn.BCEWithLogitsLoss()
 
 model = model.to(device)
@@ -158,7 +154,7 @@ def binary_accuarcy(pred_y, true_y):
     if used self.Sigmoid() in __init__ , Then use pred_y instead of torch.sigmoid(pred_y)
     """
     rounded_preds = torch.round(torch.sigmoid(pred_y))
-    correct = (rounded_preds == true_y)
+    correct = (rounded_preds == true_y).float()
     acc = correct.sum()/len(correct)
     return acc 
 
@@ -224,7 +220,7 @@ def evaluate(model, iterator, criterion):
             epoch_loss += loss.item()
             epoch_acc += acc.item()
 
-    return epoch_loss/len(iterator), epoch_acc/len(iterator)
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
 
 
 import time
@@ -254,3 +250,10 @@ for epoch in range(N_EPOCHS):
     print(f'\t Train Loss: {train_loss:.3f} | Train Acc: {train_acc*100:.2f}%')
     print(f'\t Val. Loss: {valid_loss:.3f} | Val. Acc: {valid_acc*100:.2f}%')
 
+
+
+# evaluate
+model.load_state_dict(torch.load('NNLM with RNN.pt'))
+test_loss, test_acc = evaluate(model, test_iterator, criterion)
+
+print(f'Test Loss: {test_loss:.3f} | Test Acc: {test_acc*100:.2f}%')
