@@ -1,6 +1,6 @@
 # Implementation
 
-
-모델을 직접 구현하는 공간입니다. Pytorch 기반으로 모델을 구현하고,
-
-NLP, VISION,... 다양한 분야의 모델을 구현합니다.
+# Computer Vision 
+## Generative Adversarial Network
+Vanila GAN: [vanila GAN]
+[vanila GAN]: https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Computer%20Vision/Generative%20Adversarial%20Network/GAN_basic_model/generative_adversarial_network.py
