@@ -226,3 +226,42 @@ for epoch in range(n_epochs):
     print(f'epoch: {epoch+1}')
     print(f'train_loss : {epoch_train_loss:.3f}, train_acc : {epoch_train_acc:.3f}')
     print(f'valid_loss : {epoch_valid_loss:.3f}, valid_acc : {epoch_valid_acc:.3f}')
+
+
+fig = plt.figure(figsize=(10, 6))
+ax = fig.add_subplot(1, 1, 1)
+ax.plot(train_losses, label='train_loss')
+ax.plot(valid_losses, label='valid_loss')
+plt.legend()
+ax.set_xlabel('updates')
+ax.set_ylabel('loss')
+
+fig = plt.figure(figsize = (10, 6))
+ax = fig.add_subplot(1, 1, 1)
+ax.plot(train_accs, label='train_accuracy')
+ax.plot(valid_accs, label='valid_accuracy')
+plt.legend()
+ax.set_label('updates')
+ax.set_label('accuracy')
+
+
+model.load_state_dict(torch.load('nbow.pt'))
+test_loss, test_acc = evaluate(test_dataloader, model, criterion, device)
+
+epoch_test_loss = np.mean(test_loss)
+epoch_test_acc = np.mean(test_acc)
+
+print(f'test loss: {epoch_test_loss:.3f}, test_acc: {epoch_test_acc:.3f}')
+
+def predict_sentiment(text, model, tokenizer, vocab, device):
+    tokens = tokenizer(text)
+    ids = [vocab[t] for t in tokens]
+    tensor = torch.LongTensor(ids).unsqueeze(dim=0).to(device)
+    prediction = model(tensor).squeeze(dim=0)
+    probability = torch.softmax(prediction, dim = -1)
+    predicted_class = prediction.argmax(dim=-1).item()
+    predicted_probability = probability[predicted_class].item()
+    return predicted_class, predicted_probability
+
+text = 'This film is terrible!'
+predict_sentiment(text, model, tokenizer, vocab, device)
