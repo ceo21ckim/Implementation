@@ -25,10 +25,15 @@ ResNet : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Lea
 # Others
 
 ## Recurrent Neural Network
-RNN : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recurrent%20Neural%20Network)
+Basic RNN : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recurrent%20Neural%20Network/Basic%20RNN)
+
+Vanila RNN : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recurrent%20Neural%20Network/Vanila%20RNN)
+
+Bidirectional RNN : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recurrent%20Neural%20Network/Bidirectional%20RNN)
+
 
 ## Long Short Term Memory
 LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory), [paper](http://www.bioinf.jku.at/publications/older/2604.pdf)
 
 ## Restricted Boltzman Machine
-RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Restricted%20Boltzman%20Machine), [paper](https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf)
+RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Restricted%20Boltzman%20Machine), [paper](https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf)
