@@ -1,25 +1,25 @@
 # Implementation
 
 # Recommendation Systems
-[Alternative Least Square](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Alternative%20Least%20Square)
+Alternative Least Square : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Alternative%20Least%20Square), [paper](https://web.archive.org/web/20110401191554id_/http://www2.research.att.com/~yifanhu/PUB/cf.pdf)
 
-[Association Rule](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Assocication%20Rule) : (apriori, fp-growth)
+Association Rule : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Assocication%20Rule) : (apriori, fp-growth)
 
-[MF](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Recommender%20System/Matrix%20Factorication/Matrix%20Factorization.py)
+Matrix Factorization : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Recommender%20System/Matrix%20Factorication/Matrix%20Factorization.py), [paper](https://static.aminer.cn/upload/pdf/1749/1416/1187/53e9a636b7602d9702f66092_0.pdf)
 
-[NCF](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Neural%20Collaborative%20Filtering)
+Neural Collaborative Filtering : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Neural%20Collaborative%20Filtering), [paper](https://dl.acm.org/doi/abs/10.1145/3038912.3052569)
 
-[NeuMF](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Neural%20Matrix%20Factorization)
+Neural Matrix Factorization : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Neural%20Matrix%20Factorization), [paper](https://dl.acm.org/doi/abs/10.1145/3038912.3052569)
 
 
 # Computer Vision 
 ## Generative Adversarial Network
-[Vanila GAN](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/Generative%20Adversarial%20Network/GAN_basic_model)
+Vanila GAN : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/Generative%20Adversarial%20Network/GAN_basic_model), [paper](https://arxiv.org/pdf/1406.2661.pdf)
 
 ## Image Classification
-[VGGnet](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/VGGNet)
+VGGnet : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/VGGNet), [paper](https://arxiv.org/pdf/1409.1556.pdf)
 
-[ResNet](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/ResNet)
+ResNet : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/ResNet), [paper](https://arxiv.org/pdf/1512.03385.pdf)
 
 
 
@@ -29,7 +29,7 @@
 [RNN](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recurrent%20Neural%20Network)
 
 ## Long Short Term Memory
-[LSTM](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory)
+LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory), [paper](http://www.bioinf.jku.at/publications/older/2604.pdf)
 
 ## Restricted Boltzman Machine
-[RBM](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Restricted%20Boltzman%20Machine)
+RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Restricted%20Boltzman%20Machine), [paper](https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf)
