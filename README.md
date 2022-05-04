@@ -36,5 +36,7 @@ Bidirectional RNN : [code](https://github.com/ceo21ckim/Implementation/tree/main
 
 
 ## Long Short Term Memory
-LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory), [paper](http://www.bioinf.jku.at/publications/older/2604.pdf)
+basic LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory/basic%20LSTM)
+
+Vanila LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory/Vanila%20LSTM), [paper](http://www.bioinf.jku.at/publications/older/2604.pdf)
 
