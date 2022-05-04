@@ -4,6 +4,7 @@
 Alternative Least Square : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Alternative%20Least%20Square), [paper](https://web.archive.org/web/20110401191554id_/http://www2.research.att.com/~yifanhu/PUB/cf.pdf)
 
 Association Rule : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Assocication%20Rule)
+
 Matrix Factorization : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Recommender%20System/Matrix%20Factorication/Matrix%20Factorization.py), [paper](https://static.aminer.cn/upload/pdf/1749/1416/1187/53e9a636b7602d9702f66092_0.pdf)
 
 Neural Collaborative Filtering : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Neural%20Collaborative%20Filtering), [paper](https://dl.acm.org/doi/abs/10.1145/3038912.3052569)
