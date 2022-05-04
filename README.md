@@ -11,6 +11,8 @@ Neural Collaborative Filtering : [code](https://github.com/ceo21ckim/Implementat
 
 Neural Matrix Factorization : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Neural%20Matrix%20Factorization), [paper](https://dl.acm.org/doi/abs/10.1145/3038912.3052569)
 
+RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Restricted%20Boltzman%20Machine), [paper](https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf)
+
 
 # Computer Vision 
 ## Generative Adversarial Network
@@ -36,5 +38,3 @@ Bidirectional RNN : [code](https://github.com/ceo21ckim/Implementation/tree/main
 ## Long Short Term Memory
 LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory), [paper](http://www.bioinf.jku.at/publications/older/2604.pdf)
 
-## Restricted Boltzman Machine
-RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Restricted%20Boltzman%20Machine), [paper](https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf)
