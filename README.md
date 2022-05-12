@@ -13,9 +13,22 @@ Neural Matrix Factorization : [code](https://github.com/ceo21ckim/Implementation
 
 RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Recommender%20System/Restricted%20Boltzman%20Machine), [paper](https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf)
 
+
+
+
+
+
+
 # Natural Language Processing
 ## Sequence to Sequence 
 Sequence to Sequence with RNN : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Sequence%20to%20Sequence/sequence-to-sequence%20with%20RNN.py), [paper](https://arxiv.org/pdf/1409.3215.pdf)
+
+
+
+
+
+
+
 
 
 # Computer Vision 
@@ -26,6 +39,13 @@ Vanila GAN : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%2
 VGGnet : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/VGGNet), [paper](https://arxiv.org/pdf/1409.1556.pdf)
 
 ResNet : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Computer%20Vision/ResNet), [paper](https://arxiv.org/pdf/1512.03385.pdf)
+
+
+
+
+
+
+
 
 
 
