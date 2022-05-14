@@ -64,3 +64,4 @@ basic LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%2
 
 Vanila LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory/Vanila%20LSTM), [paper](http://www.bioinf.jku.at/publications/older/2604.pdf)
 
+...
