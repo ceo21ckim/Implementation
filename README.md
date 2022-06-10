@@ -20,7 +20,6 @@ RBM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learni
 
 
 # Natural Language Processing
-## Sequence to Sequence 
 Sequence to Sequence with RNN : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Sequence%20to%20Sequence/sequence-to-sequence%20with%20RNN.py), [paper](https://arxiv.org/pdf/1409.3215.pdf)
 
 Seq2Seq-Machine Translate : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Sequence%20to%20Sequence/Seq2Seq_translate.ipynb)
