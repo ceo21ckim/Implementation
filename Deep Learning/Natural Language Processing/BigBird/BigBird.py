@@ -67,7 +67,7 @@ class BigBirdModel(BigBirdPreTrainedModel):
 
 """
 
-from transformers import BigBirdPreTrainedModel, BigBirdTokenizer, BigBirdModel 
+from transformers import BigBirdPreTrainedModel, BigBirdTokenizer, BigBirdModel, TrainingArguments 
 import torch 
 
 tokenizer = BigBirdTokenizer.from_pretrained('google/bigbird-roberta-base')
@@ -176,12 +176,12 @@ valid_set = valid_set.filter(lambda x: len(x['context']) >0)
 
 
 
-from transformers import BigBirdForQuestionAnswering, BigBirdTokenizer
+from transformers import BigBirdForQuestionAnswering, BigBirdTokenizerFast
 import torch
 
 model_id = "google/bigbird-base-trivia-itc"
 model = BigBirdForQuestionAnswering.from_pretrained(model_id).to('cuda')
-tokenizer = BigBirdTokenizer.from_pretrained(model_id)
+tokenizer = BigBirdTokenizerFast.from_pretrained(model_id)
 
 assert isinstance(tokenizer, transformers.BigBirdForQuestionAnswering), 'please input BigBirdForQuestionAnswering'
 tokenizer('The final assignment is to implemention of Bigbird.')
@@ -242,9 +242,9 @@ def evaluate(example):
 results_short = valid_set.map(evaluate)
 
 print("Exact Match (EM): {:.2f}".format(100 * sum(results_short['match'])/len(results_short)))
+# Exact Match: 48.00
 
 
 wrong_results = results_short.filter(lambda x: x['match'] is False)
 print(f"\nWrong examples: ")
-print_out = wrong_results.map(lambda x, i: print(f"{i} - Output: {x['output']} - Target: {x['norm_target']}"), with_indices=True)
-
+print_out = wrong_results.map(lambda x, i: print(f"{i} - Output: {x['output']}"), with_indices=True)
