@@ -25,7 +25,7 @@ Sequence to Sequence with RNN : [code](https://github.com/ceo21ckim/Implementati
 
 Seq2Seq-Machine Translate : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Sequence%20to%20Sequence/Seq2Seq_translate.ipynb)
 
-BigBird : [code])(https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/BigBird/BigBird.py), [paper](https://arxiv.org/pdf/2007.14062.pdf)
+BigBird : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/BigBird/BigBird.py), [paper](https://arxiv.org/pdf/2007.14062.pdf)
 
 NBoW : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Neural%20Bag-of-Word/NBoW.py)
 
