@@ -59,7 +59,7 @@ class BigBirdModel(BigBirdPreTrainedModel):
     
     Returns:
         last_hidden_state: Sequence of hidden-states at the output fo the last layer of the model.
-        pooler_output: Hast layer hidden-states of the first token of the sequence.
+        pooler_output: Last layer hidden-states of the first token of the sequence.
         hidden_states: one for the output of the embeddings.
         attentions
         cross_attentions
