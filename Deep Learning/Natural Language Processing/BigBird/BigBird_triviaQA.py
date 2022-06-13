@@ -1,12 +1,11 @@
 import datasets 
 import torch
 
-validation_dataset = datasets.load_dataset("trivia_qa", "rc", split="validation[:5%]")  # remove [:5%] to run on full validation set
+validation_dataset = datasets.load_dataset("trivia_qa", 'rc', split="validation[:10%]", script_version='master')  # remove [:5%] to run on full validation set
 
 validation_dataset.info.features
 
 def format_dataset(example):
-    # the context might be comprised of multiple contexts => me merge them here
     example["context"] = " ".join(("\n".join(example["entity_pages"]["wiki_context"])).split("\n"))
     example["targets"] = example["answer"]["aliases"]
     example["norm_target"] = example["answer"]["normalized_value"]
@@ -74,7 +73,6 @@ def get_best_valid_start_end_idx(start_scores, end_scores, top_k=1, max_size=100
 
 
 def evaluate(example):
-    # encode question and context so that they are seperated by a tokenizer.sep_token and cut at max_length
     encoding = tokenizer(example["question"], example["context"], return_tensors="pt", max_length=4096, padding="max_length", truncation=True)
     input_ids = encoding.input_ids.to("cuda")
 
@@ -83,17 +81,14 @@ def evaluate(example):
 
     start_score, end_score = get_best_valid_start_end_idx(start_scores[0], end_scores[0], top_k=8, max_size=16)
 
-    # Let's convert the input ids back to actual tokens 
     all_tokens = tokenizer.convert_ids_to_tokens(encoding["input_ids"][0].tolist())
     answer_tokens = all_tokens[start_score: end_score + 1]
 
     example["output"] = tokenizer.decode(tokenizer.convert_tokens_to_ids(answer_tokens))
-    #.replace('"', '')  # remove space prepending space token and remove unnecessary '"'
 
     answers = expand_to_aliases(example["targets"], make_sub_answers=True)
     predictions = expand_to_aliases([example["output"]])
 
-    # if there is a common element, it's a match
     example["match"] = len(list(answers & predictions)) > 0
 
     return example
@@ -101,7 +96,13 @@ def evaluate(example):
 results_short = short_validation_dataset.map(evaluate)
 
 print("Exact Match (EM): {:.2f}".format(100 * sum(results_short['match'])/len(results_short)))
+# 82.68 -> question + context
+
 
 wrong_results = results_short.filter(lambda x: x['match'] is False)
 print(f"\nWrong examples: ")
 print_out = wrong_results.map(lambda x, i: print(f"{i} - Output: {x['output']} - Target: {x['norm_target']}"), with_indices=True)
+
+
+print("Exact Match (EM): {:.2f}".format(100 * sum(results_short['match'])/len(results_short)))
+# 62.15 / all token
