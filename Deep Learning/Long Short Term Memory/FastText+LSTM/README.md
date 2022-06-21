@@ -1,6 +1,7 @@
 ### FastText+LSTM
 
 **Tokenizer**
+
 `google`에서 만든 `sentencepiece`를 사용하여 `BPE`를 통해 `tokenizer` 했습니다.
 ```
 import sentencepiece as spm 
@@ -14,6 +15,7 @@ f'--input={input_txt} --model_prefix={saving_name} --vocab_size={vocab_size + 4}
 ```
 
 **Word Embedding**
+
 `FastText`를 활용하여 `word_embedding`을 수행한 후 `LSTM`의 입력으로 사용하였습니다.
 ```
 from gensim.models import FastText
