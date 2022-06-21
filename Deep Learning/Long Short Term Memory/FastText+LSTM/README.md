@@ -1,6 +1,7 @@
 ### FastText+LSTM
 **Dataset**
-'Amazon': [url](http://jmcauley.ucsd.edu/data/amazon/links.html)
+
+`Amazon`: [URL](http://jmcauley.ucsd.edu/data/amazon/links.html)
 
 
 **1.Tokenizer**
