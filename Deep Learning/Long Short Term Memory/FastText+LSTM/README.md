@@ -1,4 +1,7 @@
 ### FastText+LSTM
+**Dataset**
+'Amazon': [url](http://jmcauley.ucsd.edu/data/amazon/links.html)
+
 
 **1.Tokenizer**
 
@@ -13,10 +16,8 @@ f'--input={input_txt} --model_prefix={saving_name} --vocab_size={vocab_size + 4}
 '--bos_id=2 --bos_piece=[BOS]' + 
 '--eos_id=3 --eos_piece=[EOS]'
 ```
-
-
-
-
+  
+  
 **2.Word Embedding**
 
 `FastText`를 활용하여 `word_embedding`을 수행한 후 `LSTM`의 입력으로 사용하였습니다.
