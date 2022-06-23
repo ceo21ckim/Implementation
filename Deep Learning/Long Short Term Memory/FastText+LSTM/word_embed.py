@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     '--vocab_size', 
     '-v', 
-    default=5000, 
+    default=8000, 
     type=int, 
     help='vocab size'
 )
