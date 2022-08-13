@@ -28,7 +28,7 @@ BigBird : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Le
 
 NBoW : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Neural%20Bag-of-Word/NBoW.py)
 
-
+Ngram : [code](https://github.com/ceo21ckim/Implementation/blob/main/Deep%20Learning/Natural%20Language%20Processing/Ngram/ngram.py)
 
 
 
