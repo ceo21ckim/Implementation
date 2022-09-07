@@ -70,5 +70,3 @@ Vanila LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%
 
 Fasttext + LSTM : [code](https://github.com/ceo21ckim/Implementation/tree/main/Deep%20Learning/Long%20Short%20Term%20Memory/FastText%2BLSTM)
 
-
-..
